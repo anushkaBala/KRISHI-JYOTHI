@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Arial', sans-serif;
+  @apply antialiased;
+}
+
+@layer base {
+  :root {
+    --background: 100, 75%, 97%;
+    --foreground: 100, 10%, 10%;
+    --card: 100, 75%, 100%;
+    --card-foreground: 100, 10%, 10%;
+    --popover: 100, 75%, 100%;
+    --popover-foreground: 100, 10%, 10%;
+    --primary: 132, 64%, 42%;
+    --primary-foreground: 100, 75%, 98%;
+    --secondary: 100, 50%, 85%;
+    --secondary-foreground: 100, 10%, 10%;
+    --muted: 100, 10%, 95%;
+    --muted-foreground: 100, 10%, 45%;
+    --accent: 132, 50%, 50%;
+    --accent-foreground: 100, 10%, 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 100, 10%, 85%;
+    --input: 100, 10%, 85%;
+    --ring: 100, 10%, 10%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 100, 75%, 98%;
+    --sidebar-foreground: 100, 5.3%, 26.1%;
+    --sidebar-primary: 100, 5.9%, 10%;
+    --sidebar-primary-foreground: 100, 75%, 98%;
+    --sidebar-accent: 100, 4.8%, 95.9%;
+    --sidebar-accent-foreground: 100, 5.9%, 10%;
+    --sidebar-border: 100, 13%, 91%;
+    --sidebar-ring: 100, 91.2%, 59.8%;
+  }
+
+  .dark {
+    --background: 100, 10%, 10%;
+    --foreground: 100, 75%, 98%;
+    --card: 100, 10%, 10%;
+    --card-foreground: 100, 75%, 98%;
+    --popover: 100, 10%, 10%;
+    --popover-foreground: 100, 75%, 98%;
+    --primary: 100, 75%, 98%;
+    --primary-foreground: 100, 10%, 10%;
+    --secondary: 100, 10%, 14.9%;
+    --secondary-foreground: 100, 75%, 98%;
+    --muted: 100, 10%, 14.9%;
+    --muted-foreground: 100, 10%, 63.9%;
+    --accent: 100, 10%, 14.9%;
+    --accent-foreground: 100, 75%, 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 100, 75%, 98%;
+    --border: 100, 10%, 14.9%;
+    --input: 100, 10%, 14.9%;
+    --ring: 100, 10%, 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 100, 5.9%, 10%;
+    --sidebar-foreground: 100, 4.8%, 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 100, 75%, 100%;
+    --sidebar-accent: 100, 3.7%, 15.9%;
+    --sidebar-accent-foreground: 100, 4.8%, 95.9%;
+    --sidebar-border: 100, 3.7%, 15.9%;
+    --sidebar-ring: 100, 91.2%, 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom colors */
+@layer base {
+    :root {
+        /* Updated Shades of Green */
+        --agri-green-lightest: 140, 60%, 98%; /* Very light green, slightly brighter */
+        --agri-green-lighter: 120, 50%, 85%;  /* Light green */
+        --agri-green-default: 100, 40%, 60%;  /* Default green, more vibrant */
+        --agri-green-darker: 90, 50%, 40%;   /* Darker green */
+        --agri-green-darkest: 80, 60%, 25%;  /* Very dark green */
+
+        /* Complementary/Accent Colors (adjust HSL values as needed) */
+        --agri-accent-yellow: 55, 80%, 60%;    /* Golden yellow, more saturated */
+        --agri-earth-brown: 35, 60%, 35%;      /* Earthy brown, richer tone */
+
+        --custom-wheat: var(--agri-green-lightest); /* Light wheat background */
+        --custom-wheatSoft: var(--agri-green-lighter);
+        --custom-wheatLighter: var(--agri-green-lightest);
+        --custom-forest: var(--agri-green-darkest); /* Deep forest green */
+        --custom-earth: var(--agri-earth-brown); /* Earthy brown */
+
+        /* Overrides with enhanced contrast */
+        --background: hsl(var(--custom-wheat));
+        --foreground: hsl(var(--agri-green-darkest));
+        --primary: hsl(var(--agri-green-default));
+        --primary-foreground: hsl(var(--agri-green-lightest));
+        --secondary: hsl(var(--agri-green-lighter));
+        --secondary-foreground: hsl(var(--agri-green-darkest));
+        --accent: hsl(var(--agri-accent-yellow));
+        --accent-foreground: hsl(var(--agri-green-darkest));
+        --muted: hsl(var(--agri-green-lightest)); /* Ensuring muted areas are very light */
+        --muted-foreground: hsl(var(--agri-green-default)); /* Use a clearer muted foreground */
+        --card: hsl(var(--custom-wheat)); /* Ensure cards have a light background */
+        --card-foreground: hsl(var(--agri-green-darkest)); /* Dark text on cards */
+    }
+}
+
+/* Enhanced custom shadows */
+@layer utilities {
+    .shadow-primary {
+        box-shadow: 0 4px 8px rgba(hsl(var(--primary)), 0.3), 0 2px 4px rgba(hsl(var(--primary)), 0.3);
+    }
+
+    .shadow-secondary {
+        box-shadow: 0 4px 8px rgba(hsl(var(--secondary)), 0.3), 0 2px 4px rgba(hsl(var(--secondary)), 0.3);
+    }
+
+    .shadow-accent {
+        box-shadow: 0 4px 8px rgba(hsl(var(--accent)), 0.3), 0 2px 4px rgba(hsl(var(--accent)), 0.3);
+    }
+}
+
