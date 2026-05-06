@@ -25,5 +25,5 @@ Krishi Jyothi combines data science, user-friendly design, and real-time inputs 
 - Frontend: HTML, CSS, JavaScript / React
 - Backend: Node.js, Express or Python Flask/Django
 - Database: MongoDB or MySQL
-- APIs: Weather API, Crop Database API, Market Prices API
+- APIs: Weather API, Crop Database API, Prices API
 - Optional: TensorFlow / Scikit-learn (for crop prediction), Twilio (for alerts)
